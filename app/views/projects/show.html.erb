@@ -29,6 +29,7 @@
     </div>
   <% end %>
 
+ <%= f.hidden_field :status, value: 'not-started' %>
   <div class="input-group">
     <%= f.text_field :name , class: 'form-control', placeholder: 'Type the task name...' %>
   <div class="input-group-append">  
@@ -51,7 +52,7 @@
 <h4>Tasks</h4>
 <% @project.tasks.each do |task| %>
 <% if task.persisted? %>
-<div class="card">
+<div class="card mb-3">
 <div class="card-body">  
 <span class="badge badge-primary"><%= task.status %></span>
 <h5 class = 'card-title d-flex justify-content-between mb-4' >
