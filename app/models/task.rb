@@ -9,6 +9,16 @@ class Task < ApplicationRecord
   	['Completed', 'complete']
   ]
 
+def badge_color
+	case status
+	when 'not-started'
+		'secondary'
+	when 'in-process'
+		'info'
+	when 'complete'
+		'success'
+	end
 
+end
 
 end
