@@ -7,7 +7,7 @@ def badge_color
 	case status
 when 'not-started'
 		'secondary'
-	when 'in-process'
+	when 'in-progress'
 		'info'
 	when 'complete'
 		'success'
@@ -19,7 +19,7 @@ def status
 	return 'not-started' if tasks.none?
 	if tasks.all? {|task| task.complete?}
 		'complete'
-		elsif tasks.any? {|task| task.in_progress?}
+		elsif tasks.any? {|task| task.in_progress?} 
 			'in-progress'
 			
 

@@ -26,7 +26,7 @@ def complete?
 end
 
 def in_progress?
-	status == 'in-progress'
+	status == 'in-process'
 end
 
 def not_started?
